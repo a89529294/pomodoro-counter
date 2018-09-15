@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import CountDownBox from "./CountDownBox";
 import TodoItemAdder from "./TodoItemAdder";
 import TodoItemList from "./TodoItemList";
+import SlideShow from "./SlideShow";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -195,6 +196,7 @@ class App extends Component {
             />
           </div>
         </div>
+        <SlideShow />
       </div>
     );
   }

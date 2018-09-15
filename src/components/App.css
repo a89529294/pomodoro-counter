@@ -169,7 +169,6 @@ body {
 }
 
 .todo-item-adder-outer-container {
-  color: red;
   text-align: center;
 }
 
@@ -280,4 +279,12 @@ body {
 .todo-item-option-wrap:hover .todo-item-option-description {
   visibility: visible;
   opacity: 1;
+}
+
+.empty-input {
+  border: red solid 1px;
+}
+
+.error-msg-div {
+  color: red;
 }
