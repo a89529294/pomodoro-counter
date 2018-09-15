@@ -17,7 +17,7 @@ const pStyle = {
 export default class extends React.Component {
   render() {
     return (
-      <Carousel autoplay={true} initialSlideHeight={5000}>
+      <Carousel autoplay={true} wrapAround={true} initialSlideHeight={5000}>
         <div>
           <div style={style}>
             <h1>What is it?</h1>
