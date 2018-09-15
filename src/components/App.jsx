@@ -19,8 +19,12 @@ class App extends Component {
       pomodoroSecond: 0,
       breakMinute: +JSON.parse(localStorage.getItem("breakDuration")),
       breakSecond: 0,
-      todoList: JSON.parse(localStorage.getItem("todoList")),
-      finishedTodoList: JSON.parse(localStorage.getItem("finishedList"))
+      todoList: localStorage.getItem("todoList")
+        ? JSON.parse(localStorage.getItem("todoList"))
+        : [],
+      finishedTodoList: localStorage.getItem("finishedList")
+        ? JSON.parse(localStorage.getItem("finishedList"))
+        : []
     };
     this.handleMinuteChange = this.handleMinuteChange.bind(this);
   }
