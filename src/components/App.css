@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+.outermost-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.navbar {
+  flex: 1 1 100%;
+  border-bottom: 2px solid green;
+  display: flex;
+}
+
+.navbar-title {
+  flex: 10 1 0;
+}
+
+.navbar-button {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-div,
+.right-div {
+  flex: 1 1 1px;
+}
+.countdown-container {
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2 1 0;
+}
+
+.countdown-container-break {
+  background-color: limegreen;
+}
+
+.countdown-time {
+  color: whitesmoke;
+  font-size: 5em;
+}
+
+.button-container {
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+}
+
+.button {
+  margin: 5px;
+  border: 1px white solid;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2em;
+  color: whitesmoke;
+  flex: 1 1 0;
+}
+
+.button:disabled {
+  color: gray;
+  border: 1px gray solid;
+}
+
+.pomodoro-count {
+  width: 100%;
+  text-align: right;
+  padding: 10px;
+  color: whitesmoke;
+}
+
+#modal-root {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-wrapper {
+  width: 33%;
+}
+
+.modal {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+#modal-root:empty {
+  display: none;
+}
+
+.label-input-container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  margin: 5px;
+}
+
+.label-duration,
+.input-duration {
+  width: 50%;
+  margin-bottom: 2px;
+}
+
+.modal-button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-button {
+  width: 33%;
+}
+
+.todo-container {
+  width: 100%;
+}
+.todo-header {
+  flex: 2 1 0;
+}
+
+.c-header {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.c-header::before {
+  background-color: #e3e3e3;
+  content: "";
+  flex: 1;
+  height: 0.1em;
+  margin-right: 1em;
+}
+
+.c-header::after {
+  background-color: #e3e3e3;
+  content: "";
+  flex: 1;
+  height: 0.1em;
+  margin-left: 1em;
+}
+
+.todo-item-adder-outer-container {
+  color: red;
+  text-align: center;
+}
+
+.todo-item-adder-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .todo-form {
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+  }
+
+  .todo-item-title {
+    flex: 1 1 0;
+
+    border-radius: 5px;
+  }
+
+  .todo-item-description {
+    flex: 1 1 0;
+    border-radius: 5px;
+  }
+}
+
+.todo-form {
+  display: flex;
+  width: 50%;
+}
+
+.todo-item-title {
+  flex: 1 1 0;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.todo-item-description {
+  flex: 6 1 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.todo-submit-btn {
+  flex: 0.1 1 0;
+  background-color: white;
+  border: 1px solid gray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.todo-submit-btn:disabled {
+  background-color: lightgray;
+}
+.todo-left-div,
+.todo-right-div {
+  flex: 4 1 0;
+}
+
+.todo-list-left-div,
+.todo-list-right-div {
+  flex: 1 1 0;
+}
+
+.todo-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list {
+  width: 50%;
+  margin-top: 1em;
+}
+
+.todo-item {
+  margin-top: 2em;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+}
+
+.todo-item:nth-child(odd) {
+  background-color: rgba(100, 100, 100, 0.1);
+}
+
+.todo-item:hover {
+  background-color: rgba(233, 231, 111, 0.9);
+}
+
+.todo-item-option-wrap {
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.todo-item-option-description {
+  /* figure out how to dynamically size the tooltip instead of hardcoding 150px */
+  width: 150px;
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  background: rgba(243, 239, 239, 0.72);
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.todo-item-option-wrap:hover .todo-item-option-description {
+  visibility: visible;
+  opacity: 1;
+}
