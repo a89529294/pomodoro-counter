@@ -338,6 +338,40 @@ div[data-tool-tip-edit]:hover::after {
   bottom: 100%;
 }
 
+div[data-tool-tip-back]::after {
+  content: attr(data-tool-tip-back);
+  position: absolute;
+  bottom: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 150ms 500ms, bottom ease-out 150ms 500ms;
+  background: gray;
+  color: white;
+  border-radius: 3px;
+}
+
+div[data-tool-tip-back]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+
+div[data-tool-tip-save]::after {
+  content: attr(data-tool-tip-save);
+  position: absolute;
+  bottom: 0;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out 150ms 500ms, bottom ease-out 150ms 500ms;
+  background: gray;
+  color: white;
+  border-radius: 3px;
+}
+
+div[data-tool-tip-save]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+
 .empty-input {
   border: red solid 1px;
 }

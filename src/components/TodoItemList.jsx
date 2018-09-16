@@ -67,16 +67,24 @@ class TodoItemList extends React.Component {
                     className="todo-item-option-wrap"
                     onClick={this.handleTodoItemSave}
                   >
-                    <div className="todo-item-option">🗸</div>
-                    <div className="todo-item-option-description">save</div>
+                    <div
+                      className="todo-item-option"
+                      data-tool-tip-save={"save"}
+                    >
+                      🗸
+                    </div>
                   </div>
 
                   <div
                     className="todo-item-option-wrap"
                     onClick={this.handleTodoItemEdit}
                   >
-                    <div className="todo-item-option">🔙</div>
-                    <div className="todo-item-option-description">back</div>
+                    <div
+                      className="todo-item-option"
+                      data-tool-tip-back={"back"}
+                    >
+                      🔙
+                    </div>
                   </div>
                 </div>
               ) : (
