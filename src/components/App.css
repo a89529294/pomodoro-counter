@@ -290,10 +290,10 @@ body {
 div[data-tool-tip-checkmark]::after {
   content: attr(data-tool-tip-checkmark);
   position: absolute;
-  bottom: 100%;
+  bottom: 0;
   white-space: nowrap;
   transform: scale(0);
-  transition: transform ease-out;
+  transition: transform ease-out 150ms 500ms, bottom ease-out 150ms 500ms;
   background: gray;
   color: white;
   border-radius: 3px;
@@ -301,15 +301,16 @@ div[data-tool-tip-checkmark]::after {
 
 div[data-tool-tip-checkmark]:hover::after {
   transform: scale(1);
+  bottom: 100%;
 }
 
 div[data-tool-tip-delete]::after {
   content: attr(data-tool-tip-delete);
   position: absolute;
-  bottom: 100%;
+  bottom: 0;
   white-space: nowrap;
   transform: scale(0);
-  transition: transform ease-out;
+  transition: transform ease-out 150ms 500ms, bottom ease-out 150ms 500ms;
   background: gray;
   color: white;
   border-radius: 3px;
@@ -317,15 +318,16 @@ div[data-tool-tip-delete]::after {
 
 div[data-tool-tip-delete]:hover::after {
   transform: scale(1);
+  bottom: 100%;
 }
 
 div[data-tool-tip-edit]::after {
   content: attr(data-tool-tip-edit);
   position: absolute;
-  bottom: 100%;
+  bottom: 0;
   white-space: nowrap;
   transform: scale(0);
-  transition: transform ease-out;
+  transition: transform ease-out 150ms 500ms, bottom ease-out 150ms 500ms;
   background: gray;
   color: white;
   border-radius: 3px;
@@ -333,6 +335,7 @@ div[data-tool-tip-edit]::after {
 
 div[data-tool-tip-edit]:hover::after {
   transform: scale(1);
+  bottom: 100%;
 }
 
 .empty-input {
