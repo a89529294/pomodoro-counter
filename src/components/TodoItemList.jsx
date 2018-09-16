@@ -87,26 +87,38 @@ class TodoItemList extends React.Component {
                       className="todo-item-option-wrap"
                       onClick={this.handleTodoItemEdit}
                     >
-                      <div className="todo-item-option">🔨</div>
-                      <div className="todo-item-option-description">edit</div>
+                      <div
+                        className="todo-item-option"
+                        data-tool-tip-edit={"edit"}
+                      >
+                        🔨
+                      </div>
                     </div>
                   ) : null}
                   <div
                     className="todo-item-option-wrap"
                     onClick={this.handleTodoItemDelete}
                   >
-                    <div className="todo-item-option">➖</div>
-                    <div className="todo-item-option-description">delete</div>
+                    <div
+                      className="todo-item-option"
+                      data-tool-tip-delete={"delete"}
+                    >
+                      ➖
+                    </div>
                   </div>
                   <div
                     className="todo-item-option-wrap"
                     onClick={this.handleTodoItemInProgressOrDoneToggle}
                   >
-                    <div className="todo-item-option">✔️</div>
-                    <div className="todo-item-option-description">
-                      {this.props.doneList
-                        ? "Move back to TODO"
-                        : "Mark as done"}
+                    <div
+                      className="todo-item-option"
+                      data-tool-tip-checkmark={
+                        this.props.doneList
+                          ? "Move back to TODO"
+                          : "Mark as done"
+                      }
+                    >
+                      ✔️
                     </div>
                   </div>
                 </div>

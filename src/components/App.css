@@ -264,8 +264,8 @@ body {
   cursor: pointer;
 }
 
-.todo-item-option-description {
-  /* figure out how to dynamically size the tooltip instead of hardcoding 150px */
+/* .todo-item-option-description {
+ 
   width: 150px;
   position: absolute;
   top: -18px;
@@ -276,9 +276,63 @@ body {
   opacity: 0;
 }
 
+
+
 .todo-item-option-wrap:hover .todo-item-option-description {
   visibility: visible;
   opacity: 1;
+} */
+
+.todo-item-option {
+  position: relative;
+}
+
+div[data-tool-tip-checkmark]::after {
+  content: attr(data-tool-tip-checkmark);
+  position: absolute;
+  bottom: 100%;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out;
+  background: gray;
+  color: white;
+  border-radius: 3px;
+}
+
+div[data-tool-tip-checkmark]:hover::after {
+  transform: scale(1);
+}
+
+div[data-tool-tip-delete]::after {
+  content: attr(data-tool-tip-delete);
+  position: absolute;
+  bottom: 100%;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out;
+  background: gray;
+  color: white;
+  border-radius: 3px;
+}
+
+div[data-tool-tip-delete]:hover::after {
+  transform: scale(1);
+}
+
+div[data-tool-tip-edit]::after {
+  content: attr(data-tool-tip-edit);
+  position: absolute;
+  bottom: 100%;
+  white-space: nowrap;
+  transform: scale(0);
+  transition: transform ease-out;
+  background: gray;
+  color: white;
+  border-radius: 3px;
+}
+
+div[data-tool-tip-edit]:hover::after {
+  transform: scale(1);
 }
 
 .empty-input {
